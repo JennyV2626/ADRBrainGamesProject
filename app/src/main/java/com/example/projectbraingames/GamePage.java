@@ -12,6 +12,8 @@ public class GamePage extends AppCompatActivity {
 
     CardView colorNotWordCard;
     CardView reactionTimeCard;
+    CardView lowHighCard;
+    CardView oddOneOutCard;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -35,35 +37,38 @@ public class GamePage extends AppCompatActivity {
             }
         });
 
-
-        /*
-        reactionGameCard = (android.widget.ImageButton) findViewById(R.id.reactiontime);
-        reactionGameCard.setOnClickListener(new View.OnClickListener() {
+        reactionTimeCard = (CardView) findViewById(R.id.reactiontime);
+        reactionTimeCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openReactionGame();
             }
         });
 
-/
-        lowHighGameButton = (android.widget.ImageButton) findViewById(R.id.lowhigh);
-        lowHighGameButton.setOnClickListener(new View.OnClickListener() {
+        lowHighCard = (CardView) findViewById(R.id.lowhigh);
+        lowHighCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openGuessGame();
+                openLowHighGame();
             }
         });
 
-        colorGameButton = (android.widget.ImageButton) findViewById(R.id.colornotword);
-        colorGameButton.setOnClickListener(new View.OnClickListener() {
+        oddOneOutCard = (CardView) findViewById(R.id.oddoneout);
+        oddOneOutCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openColorNotWordGame();
+                openOddOneOutGame();
             }
-        }); */
+        });
     }
+
     public void backToMain(){
         android.content.Intent intent = new android.content.Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openColorNotWordGame(){
+        android.content.Intent intent = new android.content.Intent(this, SplashActivity.class);
         startActivity(intent);
     }
 
@@ -72,13 +77,14 @@ public class GamePage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openGuessGame(){
+    public void openLowHighGame(){
         android.content.Intent intent = new android.content.Intent(this, LowHighGame.class);
         startActivity(intent);
     }
 
-    public void openColorNotWordGame(){
-        android.content.Intent intent = new android.content.Intent(this, SplashActivity.class);
+    public void openOddOneOutGame(){
+        android.content.Intent intent = new android.content.Intent(this, OddOneOutGame.class);
         startActivity(intent);
     }
+
 }

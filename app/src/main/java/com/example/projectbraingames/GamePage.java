@@ -14,6 +14,7 @@ public class GamePage extends AppCompatActivity {
     CardView reactionTimeCard;
     CardView lowHighCard;
     CardView oddOneOutCard;
+    CardView ticTacToeCard;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -60,6 +61,14 @@ public class GamePage extends AppCompatActivity {
                 openOddOneOutGame();
             }
         });
+
+        ticTacToeCard = (CardView) findViewById(R.id.tictactoe);
+        ticTacToeCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTicTacToeGame();
+            }
+        });
     }
 
     public void backToMain(){
@@ -84,6 +93,11 @@ public class GamePage extends AppCompatActivity {
 
     public void openOddOneOutGame(){
         android.content.Intent intent = new android.content.Intent(this, OddOneOutGame.class);
+        startActivity(intent);
+    }
+
+    public void openTicTacToeGame(){
+        android.content.Intent intent = new android.content.Intent(this, TicTacToeGame.class);
         startActivity(intent);
     }
 

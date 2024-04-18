@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/shojumaru"
         android:text="Brain Games"
-        android:textSize="28sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +38,5 @@
         android:layout_marginTop="20dp"
         android:text="About Us!"
         android:textSize="25dp" />
-
 
 </RelativeLayout>

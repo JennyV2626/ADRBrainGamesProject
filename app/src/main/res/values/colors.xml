@@ -3,8 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="mainBG">#FCF2E4</color>
-    <color name="gameBG">#F1E6E6</color>
-    <color name="cardBG">#FFEBF1</color>
+    <color name="gameBG">#FFF5F5</color>
+    <color name="cardBG">#D5E1E4</color>
 
     <color name="pink">#FF80AB</color>
     <!--    <color name="yellow">#FFFF8D</color>-->

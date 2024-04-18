@@ -10,10 +10,25 @@ import android.widget.TextView;
 
 public class TicTacToeGame extends AppCompatActivity {
 
+    android.widget.ImageButton backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe_game);
+
+        backButton = (android.widget.ImageButton)findViewById(R.id.backToGames);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openGamePage();
+            }
+        });
     }
 
+
+    public void openGamePage(){
+        android.content.Intent intent = new android.content.Intent(this, GamePage.class);
+        startActivity(intent);
+    }
 }

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gameBG"
-    tools:context=".GamePage">
+    tools:context=".GamePage"
+    android:layout_margin="5dp">
 
 
     <TextView
@@ -33,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/colornotword"
                 android:layout_height="170dp"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp">
@@ -54,15 +55,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="24dp"
-                                android:text="Color Not Word"/>
+                                android:fontFamily="@font/coiny"
+                                android:text="Color Not Word"
+                                android:textSize="24dp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -83,7 +87,7 @@
                 android:id="@+id/reactiontime"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp">
@@ -108,12 +112,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="Reaction Time"/>
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
-                                android:text="(Description + Category)"/>
+                                android:fontFamily="@font/coiny"
+                                android:text="(Description + Category)"
+                                android:textSize="16dp" />
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -133,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/lowhigh"
                 android:layout_height="170dp"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp">
@@ -158,11 +165,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="Lower Or Higher?"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -185,7 +194,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/oddoneout"
                 android:layout_height="170dp"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp">
@@ -210,11 +219,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="Odd One Out"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -236,7 +247,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:id="@+id/tictactoe"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginLeft="30dp"
@@ -262,11 +273,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="Tic-Tac-Toe"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
+                                android:fontFamily="@font/coiny"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout

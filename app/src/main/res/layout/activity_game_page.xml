@@ -5,10 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/gameBG"
-    tools:context=".GamePage"
-    android:layout_margin="5dp">
-
+    android:background="@drawable/background2"
+    tools:context=".GamePage">
 
     <TextView
             android:id="@+id/introText"
@@ -20,10 +18,18 @@
             android:layout_gravity="center"
             android:textSize="35sp" />
 
+        <Button
+            android:id="@+id/backHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:text="Go Back Home!" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/cardList"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -33,7 +39,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:id="@+id/colornotword"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 app:cardCornerRadius="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
@@ -66,9 +72,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
-                                android:fontFamily="@font/coiny"
+                                android:fontFamily="@font/baloo_bhai_2"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
+
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
@@ -77,7 +84,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:src="@drawable/colornotwordlogo"/>
-
                         </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -86,7 +92,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/reactiontime"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
@@ -118,8 +124,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/coiny"
-                                android:text="(Description + Category)"
+                                android:fontFamily="@font/baloo_bhai_2"
+                                android:text="(Description + Category) How fast can you react? Click the button as soon as the background is green! Can you beat the previous score(s)?"
                                 android:textSize="16dp" />
                         </LinearLayout>
                         <RelativeLayout
@@ -139,7 +145,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:id="@+id/lowhigh"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
@@ -171,7 +177,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
-                                android:fontFamily="@font/coiny"
+                                android:fontFamily="@font/baloo_bhai_2"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -193,7 +199,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:id="@+id/oddoneout"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
@@ -225,7 +231,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
-                                android:fontFamily="@font/coiny"
+                                android:fontFamily="@font/baloo_bhai_2"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -245,7 +251,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="200dp"
                 android:id="@+id/tictactoe"
                 app:cardCornerRadius="30dp"
                 android:layout_marginTop="30dp"
@@ -279,7 +285,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
-                                android:fontFamily="@font/coiny"
+                                android:fontFamily="@font/baloo_bhai_2"
                                 android:text="(Description + Category)"/>
                         </LinearLayout>
                         <RelativeLayout
@@ -301,12 +307,6 @@
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/backHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="Go Back Home!" />
 
 
 </LinearLayout>

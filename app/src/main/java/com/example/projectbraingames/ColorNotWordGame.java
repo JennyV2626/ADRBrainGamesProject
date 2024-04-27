@@ -58,6 +58,7 @@ public class ColorNotWordGame extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                exit();
                 openGamePage();
             }
         });
@@ -98,7 +99,7 @@ public class ColorNotWordGame extends AppCompatActivity {
 
         if(result) {
             // answer is correct
-            score += 10;
+            score += 1;
             setQuestion();
         } else {
             // wrong answer. exit the game

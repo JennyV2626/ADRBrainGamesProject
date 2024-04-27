@@ -6,19 +6,21 @@
     <color name="gameBG">#FFF5F5</color>
     <color name="cardBG">#D5E1E4</color>
 
-    <color name="pink">#FF80AB</color>
-    <!--    <color name="yellow">#FFFF8D</color>-->
-    <!--    <color name="blue">#84FFFF</color>-->
-    <color name="purple">#B388FF</color>
-    <!--    <color name="green">#B9F6CA</color>-->
+
+<!--    Randomized pastel bg colors-->
+    <color name="pink1">#FF97BA</color>
+    <color name="red1">#FFB5B5</color>
+    <color name="orange1">#FFD0B7</color>
+    <color name="yellow1">#FFFF8D</color>
+    <color name="blue1">#C9FFFF</color>
+    <color name="green1">#CEFFDB</color>
+    <color name="purple1">#E1D0FF</color>
+    <color name="gray1">#EAEAEA</color>
+
+    <color name="pink">#E16891</color>
     <color name="base">#933131</color>
 
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-
+<!--    For color, not word game-->
     <color name="red">#FF5757</color>
     <color name="blue">#5271FF</color>
     <color name="green">#7ED957</color>

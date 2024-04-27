@@ -31,7 +31,8 @@ public class ScoreActivity extends AppCompatActivity {
         btnStartAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), GamePage.class);
+
+                Intent i = new Intent(view.getContext(), SplashActivity.class);
                 view.getContext().startActivity(i);
             }
         });

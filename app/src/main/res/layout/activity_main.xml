@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBG"
+    android:background="@drawable/background2"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,11 +14,13 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/shojumaru"
         android:text="Brain Games"
-        android:textSize="40sp"
+        android:textSize="45sp"
+        android:id="@+id/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
 
     <ImageButton
         android:id="@+id/brainLogo"
@@ -38,5 +40,7 @@
         android:layout_marginTop="20dp"
         android:text="About Us!"
         android:textSize="25dp" />
+
+
 
 </RelativeLayout>

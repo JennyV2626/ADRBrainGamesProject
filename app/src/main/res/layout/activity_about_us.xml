@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBG"
+    android:background="@drawable/background3"
     tools:context=".AboutUsPage">
 
     <ImageButton
@@ -13,8 +13,7 @@
         android:layout_height="54dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        app:srcCompat="@drawable/arrowback"/>
-
+        app:srcCompat="@drawable/arrowback" />
 
     <TextView
         android:id="@+id/aboutUs"
@@ -39,21 +38,30 @@
         android:id="@+id/helloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/ourLogo"
-        android:layout_margin="10dp"
-        android:text="Hey there! We call ourselves the Mind Masters! :)"
-        android:textSize="18dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloo_bhai_2"
+        android:gravity="fill_horizontal"
+        android:text="Hey there! We're Areli and Jen, but we call ourselves the Mind Masters :) HAHA."
+        android:textSize="20dp" />
 
 
     <TextView
         android:id="@+id/purposeMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/helloWorld"
-        android:layout_margin="10dp"
-        android:text="Our purpose here is to ..."
-        android:textSize="18dp"/>
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloo_bhai_2"
+        android:text="Our goal with this project was to put together minigames (all in which are existing games) with the intention of strengthening and challenging your cognitive skills! :D"
+        android:textSize="20dp"
+        android:gravity="fill_horizontal"/>
 </RelativeLayout>

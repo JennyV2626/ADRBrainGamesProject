@@ -9,13 +9,12 @@
 
 <!--    Randomized pastel bg colors-->
     <color name="pink1">#FF97BA</color>
-    <color name="red1">#FFB5B5</color>
     <color name="orange1">#FFD0B7</color>
-    <color name="yellow1">#FFFF8D</color>
+    <color name="yellow1">#FFFFB3</color>
+    <color name="green1">#75A381</color>
     <color name="blue1">#C9FFFF</color>
-    <color name="green1">#CEFFDB</color>
     <color name="purple1">#E1D0FF</color>
-    <color name="gray1">#EAEAEA</color>
+
 
     <color name="pink">#E16891</color>
     <color name="base">#933131</color>

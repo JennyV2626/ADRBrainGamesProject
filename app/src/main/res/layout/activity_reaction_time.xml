@@ -9,15 +9,20 @@
     android:orientation="vertical"
     tools:context=".ReactionTimeGame">
 
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/imgView"/>
 
   <Button
       android:id="@+id/centralButton"
-      android:layout_width="333dp"
-      android:layout_height="192dp"
+      android:layout_width="350dp"
+      android:layout_height="200dp"
       android:layout_centerInParent="true"
-      android:fontFamily="@font/bangers"
+      android:fontFamily="@font/titan_one"
       android:includeFontPadding="true"
-      android:text="Click when Green!"
+      android:text="@string/notGreen"
+      android:textAlignment="center"
       android:textSize="40sp" />
 
 
@@ -29,5 +34,13 @@
       android:layout_alignParentBottom="true"
       app:srcCompat="@drawable/arrowback"/>
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="65dp"
+      android:text="00:00:00"
+      android:id="@+id/counterTime"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="35dp"/>
 
 </RelativeLayout>

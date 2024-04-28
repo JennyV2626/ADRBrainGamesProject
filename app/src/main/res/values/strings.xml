@@ -3,4 +3,5 @@
     <string name="start_msg">Guess the number between 1 and 100!!</string>
     <string name="splash_game_name">COLOR: BRAIN TRAINING</string>
     <string name="score_note">Your score is</string>
+    <string name="notGreen">Click When Green!</string>
 </resources>

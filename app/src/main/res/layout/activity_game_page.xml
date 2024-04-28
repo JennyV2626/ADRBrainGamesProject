@@ -125,7 +125,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category) How fast can you react? Click the button as soon as the background is green! Can you beat the previous score(s)?"
+                                android:text="(Description + Category)"
                                 android:textSize="16dp" />
                         </LinearLayout>
                         <RelativeLayout

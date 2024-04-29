@@ -14,6 +14,17 @@
       android:layout_height="match_parent"
       android:id="@+id/imgView"/>
 
+  <Chronometer
+      android:id="@+id/chronometer"
+      android:layout_width="match_parent"
+      android:layout_height="137dp"
+      android:layout_centerHorizontal="true"
+      android:format="00:00:00"
+      android:textSize="75dp"
+      android:layout_above="@id/centralButton"
+      android:textStyle="bold"
+      android:textAlignment="center"/>
+
   <Button
       android:id="@+id/centralButton"
       android:layout_width="350dp"
@@ -33,14 +44,5 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentBottom="true"
       app:srcCompat="@drawable/arrowback"/>
-
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="65dp"
-      android:text="00:00:00"
-      android:id="@+id/counterTime"
-      android:layout_centerHorizontal="true"
-      android:layout_marginTop="35dp"/>
 
 </RelativeLayout>

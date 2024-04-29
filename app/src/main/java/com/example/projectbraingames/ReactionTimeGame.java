@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.view.View;
 import android.graphics.Color;
 
@@ -19,10 +21,17 @@ public class ReactionTimeGame extends AppCompatActivity {
     android.widget.ImageView imageView;
     android.widget.TextView timerText;
 
-    private final String isGreen = "!! CLICK !! IT'S GREEN !!";
+    private final String greenAlert = "!! CLICK !!   !! IT'S GREEN !!";
 
     public int currentNum;
     public int count;
+    public boolean isGreen;
+
+
+    android.widget.Chronometer chronometer;
+    Handler handler;
+    long tMilliSec, tStart, tBuff, tUpdate = 0L;
+    int sec, min, milliSec;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,26 +41,34 @@ public class ReactionTimeGame extends AppCompatActivity {
 
         currentNum = 10;
         count = 0;
+        isGreen = false;
         imageView = findViewById(R.id.imgView);
 
 
         Timer timer = new Timer();
         MyTimer colorTimer = new MyTimer();
-        timer.schedule(colorTimer, 0, 1000 + (int)(Math.random() * 4000));
+        timer.schedule(colorTimer, 0, 100 + (int)(Math.random() * 3000));
 
-        if(count == 100){
+        if(isGreen){
             colorTimer.cancel();
             timer.cancel();
         }
 
-        timerText = (android.widget.TextView)findViewById(R.id.counterTime);
+        chronometer = (android.widget.Chronometer)findViewById(R.id.chronometer);
+
+        handler = new Handler();
+
 
 
         mainButton = (android.widget.Button) findViewById(R.id.centralButton);
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //checkColor();
+                if(isGreen){
+                    tBuff += tMilliSec;
+                    handler.removeCallbacks(runnable);
+                    chronometer.stop();
+                }
             }
         });
 
@@ -62,7 +79,9 @@ public class ReactionTimeGame extends AppCompatActivity {
                 openGamePage();
             }
         });
+
     }
+
 
     private class MyTimer extends TimerTask{
         @Override
@@ -70,7 +89,9 @@ public class ReactionTimeGame extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    getRandomBGColor();
+                    if(!isGreen){
+                        getRandomBGColor();
+                    }
                 }
             });
         }
@@ -91,8 +112,12 @@ public class ReactionTimeGame extends AppCompatActivity {
             }
             if (randomNum == 3 && count > 3) {
                 imageView.setBackgroundResource(R.color.green1);
-                mainButton.setText(isGreen);
+                mainButton.setText(greenAlert);
                 count = 100;
+                isGreen = true;
+                tStart = SystemClock.uptimeMillis();
+                handler.postDelayed(runnable, 0);
+                chronometer.start();
             }
             if (randomNum == 4) {
                 imageView.setBackgroundResource(R.color.blue1);
@@ -115,6 +140,25 @@ public class ReactionTimeGame extends AppCompatActivity {
 //        }
    // }
 
+
+    public Runnable runnable = new Runnable() {
+        @SuppressLint("SetTextI18n")
+        @Override
+        public void run() {
+            tMilliSec = SystemClock.uptimeMillis() - tStart;
+            tUpdate = tBuff + tMilliSec;
+            sec = (int)(tUpdate/1000);
+            min = sec/60;
+            sec = sec%60;
+            milliSec = (int)(tUpdate%100);
+            if(sec < 10){
+                chronometer.setText("0" + min + ":0" + sec + ":" + milliSec);
+            } else if(sec > 10){
+                chronometer.setText("0" + min + ":" + sec + ":" + milliSec);
+            }
+            handler.postDelayed(this, 60);
+        }
+    };
 
     public void openGamePage(){
         android.content.Intent intent = new android.content.Intent(this, GamePage.class);

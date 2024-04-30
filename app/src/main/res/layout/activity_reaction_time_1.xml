@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".ReactionTimeGame">
+    tools:context=".ReactionTimeGameOne">
 
   <ImageView
       android:layout_width="match_parent"
@@ -44,5 +44,15 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentBottom="true"
       app:srcCompat="@drawable/arrowback"/>
+
+  <TextView
+      android:id="@+id/gameModeType"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:textSize="25dp"
+      android:layout_marginTop="20dp"
+      android:textAlignment="center"
+      android:text="Game Mode: Randomized Color" />
 
 </RelativeLayout>

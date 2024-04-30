@@ -7,15 +7,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
-import android.graphics.Color;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ReactionTimeGame extends AppCompatActivity {
+public class ReactionTimeGameOne extends AppCompatActivity {
     android.widget.ImageButton backButton;
     android.widget.Button mainButton;
     android.widget.ImageView imageView;
@@ -37,7 +34,7 @@ public class ReactionTimeGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reaction_time);
+        setContentView(R.layout.activity_reaction_time_1);
 
         currentNum = 10;
         count = 0;
@@ -110,7 +107,7 @@ public class ReactionTimeGame extends AppCompatActivity {
             if (randomNum == 2) {
                 imageView.setBackgroundResource(R.color.yellow1);
             }
-            if (randomNum == 3 && count > 3) {
+            if (randomNum == 3 && count > 6) {
                 imageView.setBackgroundResource(R.color.green1);
                 mainButton.setText(greenAlert);
                 count = 100;

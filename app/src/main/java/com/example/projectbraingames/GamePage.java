@@ -82,7 +82,7 @@ public class GamePage extends AppCompatActivity {
     }
 
     public void openReactionGame(){
-        android.content.Intent intent = new android.content.Intent(this, ReactionTimeGame.class);
+        android.content.Intent intent = new android.content.Intent(this, ReactionTimeOptionPage.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ReactionTimeGameTwo">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imgView"/>
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_centerHorizontal="true"
+        android:format="00:00:00"
+        android:textSize="75dp"
+        android:layout_below="@id/brainImg"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+    <ImageView
+        android:id="@+id/brainImg"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        app:srcCompat="@drawable/happybrain"/>
+
+
+    <Button
+        android:id="@+id/centralButton"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/titan_one"
+        android:includeFontPadding="true"
+        android:text="@string/notGreen"
+        android:textAlignment="center"
+        android:layout_below="@id/chronometer"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/gameModeType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:text="Game Mode: SAD BRAIN" />
+
+    <ImageButton
+        android:id="@+id/backToGames"
+        android:layout_width="136dp"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/arrowback"/>
+
+</RelativeLayout>

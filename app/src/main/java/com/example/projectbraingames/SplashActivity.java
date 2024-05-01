@@ -16,8 +16,6 @@ public class SplashActivity extends AppCompatActivity {
                 new Runnable() {
                     @Override
                     public void run() {
-//                        Intent intent = new Intent(this, ColorNotWordGame.class);
-//                        startActivity(intent);
                         android.content.Intent intent = new android.content.Intent(SplashActivity.this, ColorNotWordGame.class);
                         startActivity(intent);
                         finish();

@@ -12,6 +12,8 @@ public class GamePage extends AppCompatActivity {
 
     CardView colorNotWordCard;
     CardView reactionTimeCard;
+
+    CardView reactionTime2Card;
     CardView lowHighCard;
     CardView oddOneOutCard;
     CardView ticTacToeCard;
@@ -46,6 +48,14 @@ public class GamePage extends AppCompatActivity {
             }
         });
 
+        reactionTime2Card = (CardView) findViewById(R.id.reactiontime2);
+        reactionTime2Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReactionGame2();
+            }
+        });
+
         lowHighCard = (CardView) findViewById(R.id.lowhigh);
         lowHighCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +63,7 @@ public class GamePage extends AppCompatActivity {
                 openLowHighGame();
             }
         });
+
 
         oddOneOutCard = (CardView) findViewById(R.id.oddoneout);
         oddOneOutCard.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +93,12 @@ public class GamePage extends AppCompatActivity {
     }
 
     public void openReactionGame(){
-        android.content.Intent intent = new android.content.Intent(this, ReactionTimeOptionPage.class);
+        android.content.Intent intent = new android.content.Intent(this, ReactionTimeGame.class);
+        startActivity(intent);
+    }
+
+    public void openReactionGame2(){
+        android.content.Intent intent = new android.content.Intent(this, ReactionTimeGame2.class);
         startActivity(intent);
     }
 

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ProjectBrainGames"
         tools:targetApi="31">
         <activity
-            android:name=".ReactionTimeOptionPage"
+            android:name=".ReactionTimeGame2"
             android:exported="false" />
         <activity
             android:name=".TicTacToeGame"
@@ -43,7 +43,7 @@
             android:name=".cardviews"
             android:exported="false" />
         <activity
-            android:name=".ReactionTimeGameOne"
+            android:name=".ReactionTimeGame"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

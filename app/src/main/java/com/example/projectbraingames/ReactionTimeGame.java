@@ -12,18 +12,16 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ReactionTimeGameTwo extends AppCompatActivity {
+public class ReactionTimeGame extends AppCompatActivity {
     android.widget.ImageButton backButton;
     android.widget.Button mainButton;
     android.widget.ImageView imageView;
     android.widget.TextView timerText;
 
     private final String greenAlert = "!! CLICK !!   !! IT'S GREEN !!";
-
     public int currentNum;
     public int count;
     public boolean isGreen;
-
 
     android.widget.Chronometer chronometer;
     Handler handler;
@@ -34,7 +32,7 @@ public class ReactionTimeGameTwo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reaction_time_2);
+        setContentView(R.layout.activity_reaction_time);
 
         currentNum = 10;
         count = 0;
@@ -54,7 +52,6 @@ public class ReactionTimeGameTwo extends AppCompatActivity {
         chronometer = (android.widget.Chronometer)findViewById(R.id.chronometer);
 
         handler = new Handler();
-
 
 
         mainButton = (android.widget.Button) findViewById(R.id.centralButton);
@@ -135,7 +132,7 @@ public class ReactionTimeGameTwo extends AppCompatActivity {
 //        } else if(!isGreen){
 //            textFeedback.setText("");
 //        }
-    // }
+   // }
 
 
     public Runnable runnable = new Runnable() {

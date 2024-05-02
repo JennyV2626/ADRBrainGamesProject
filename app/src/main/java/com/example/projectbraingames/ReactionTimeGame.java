@@ -42,7 +42,7 @@ public class ReactionTimeGame extends AppCompatActivity {
 
         Timer timer = new Timer();
         MyTimer colorTimer = new MyTimer();
-        timer.schedule(colorTimer, 0, 100 + (int)(Math.random() * 3000));
+        timer.schedule(colorTimer, 0, 2000);
 
         if(isGreen){
             colorTimer.cancel();
@@ -104,7 +104,7 @@ public class ReactionTimeGame extends AppCompatActivity {
             if (randomNum == 2) {
                 imageView.setBackgroundResource(R.color.yellow1);
             }
-            if (randomNum == 3 && count > 6) {
+            if (randomNum == 3 && count > 5) {
                 imageView.setBackgroundResource(R.color.green1);
                 mainButton.setText(greenAlert);
                 count = 100;
@@ -145,10 +145,10 @@ public class ReactionTimeGame extends AppCompatActivity {
             min = sec/60;
             sec = sec%60;
             milliSec = (int)(tUpdate%100);
-            if(sec < 10){
-                chronometer.setText("0" + min + ":0" + sec + ":" + milliSec);
-            } else if(sec > 10){
+            if(sec >= 10){
                 chronometer.setText("0" + min + ":" + sec + ":" + milliSec);
+            } else{
+                chronometer.setText("0" + min + ":0" + sec + ":" + milliSec);
             }
             handler.postDelayed(this, 60);
         }

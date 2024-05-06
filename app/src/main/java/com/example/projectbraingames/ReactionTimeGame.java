@@ -3,6 +3,7 @@ package com.example.projectbraingames;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -18,7 +19,7 @@ public class ReactionTimeGame extends AppCompatActivity {
     android.widget.ImageView imageView;
     android.widget.TextView timerText;
 
-    private final String greenAlert = "!! CLICK !!   !! IT'S GREEN !!";
+    private final String greenAlert = "IT'S GREEN!";
     public int currentNum;
     public int count;
     public boolean isGreen;
@@ -50,6 +51,7 @@ public class ReactionTimeGame extends AppCompatActivity {
         }
 
         chronometer = (android.widget.Chronometer)findViewById(R.id.chronometer);
+        chronometer.setTextColor(Color.parseColor("#D8D8D8"));
 
         handler = new Handler();
 
@@ -61,6 +63,7 @@ public class ReactionTimeGame extends AppCompatActivity {
                 if(isGreen){
                     tBuff += tMilliSec;
                     handler.removeCallbacks(runnable);
+                    chronometer.setTextColor(Color.BLACK);
                     chronometer.stop();
                 }
             }
@@ -97,15 +100,19 @@ public class ReactionTimeGame extends AppCompatActivity {
         if(currentNum != randomNum) {
             if (randomNum == 0) {
                 imageView.setBackgroundResource(R.color.pink1);
+                chronometer.setTextColor(getResources().getColor(R.color.pink1));
             }
             if (randomNum == 1) {
                 imageView.setBackgroundResource(R.color.orange1);
+                chronometer.setTextColor(getResources().getColor(R.color.orange1));
             }
             if (randomNum == 2) {
                 imageView.setBackgroundResource(R.color.yellow1);
+                chronometer.setTextColor(getResources().getColor(R.color.yellow1));
             }
             if (randomNum == 3 && count > 5) {
                 imageView.setBackgroundResource(R.color.green1);
+                chronometer.setTextColor(getResources().getColor(R.color.green1));
                 mainButton.setText(greenAlert);
                 count = 100;
                 isGreen = true;
@@ -115,9 +122,11 @@ public class ReactionTimeGame extends AppCompatActivity {
             }
             if (randomNum == 4) {
                 imageView.setBackgroundResource(R.color.blue1);
+                chronometer.setTextColor(getResources().getColor(R.color.blue1));
             }
             if (randomNum == 5) {
                 imageView.setBackgroundResource(R.color.purple1);
+                chronometer.setTextColor(getResources().getColor(R.color.purple1));
             }
 
             currentNum = randomNum;
@@ -153,6 +162,7 @@ public class ReactionTimeGame extends AppCompatActivity {
             handler.postDelayed(this, 60);
         }
     };
+
 
     public void openGamePage(){
         android.content.Intent intent = new android.content.Intent(this, GamePage.class);

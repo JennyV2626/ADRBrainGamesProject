@@ -34,7 +34,7 @@
             android:name=".LowHighGame"
             android:exported="false" />
         <activity
-            android:name=".ColorNotWordGame"
+            android:name=".WordNotColorGame"
             android:exported="false" />
         <activity
             android:name=".AboutUsPage"

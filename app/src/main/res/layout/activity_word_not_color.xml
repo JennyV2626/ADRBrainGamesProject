@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ColorNotWordGame">
+    tools:context=".WordNotColorGame">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,8 +54,8 @@
                 app:columnCount="2"
                 android:layout_gravity="center">
 
-                <Button
-                    android:id="@+id/btn_red"
+                <ImageButton
+                    android:id="@+id/red"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     app:layout_row="0"
@@ -63,11 +63,12 @@
                     android:text="red"
                     android:layout_margin="5dp"
                     android:backgroundTint="@color/red"
+                    android:background="@drawable/happybrain"
                     android:textColor="@color/red"
                     android:onClick="submitAnswer"/>
 
-                <Button
-                    android:id="@+id/btn_blue"
+                <ImageButton
+                    android:id="@+id/blue"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     app:layout_row="0"
@@ -75,11 +76,12 @@
                     android:text="blue"
                     android:layout_margin="5dp"
                     android:backgroundTint="@color/blue"
+                    android:background="@drawable/happybrain"
                     android:textColor="@color/blue"
                     android:onClick="submitAnswer"/>
 
-                <Button
-                    android:id="@+id/btn_green"
+                <ImageButton
+                    android:id="@+id/green"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     app:layout_row="1"
@@ -87,11 +89,12 @@
                     android:text="green"
                     android:layout_margin="5dp"
                     android:backgroundTint="@color/green"
+                    android:background="@drawable/happybrain"
                     android:textColor="@color/green"
                     android:onClick="submitAnswer"/>
 
-                <Button
-                    android:id="@+id/btn_yellow"
+                <ImageButton
+                    android:id="@+id/yellow"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     app:layout_row="1"
@@ -99,6 +102,7 @@
                     android:text="yellow"
                     android:layout_margin="5dp"
                     android:backgroundTint="@color/yellow"
+                    android:background="@drawable/happybrain"
                     android:textColor="@color/yellow"
                     android:onClick="submitAnswer"/>
 

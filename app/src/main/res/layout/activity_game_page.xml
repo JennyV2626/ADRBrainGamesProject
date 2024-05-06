@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background5"
     tools:context=".GamePage">
 
     <TextView
@@ -13,8 +12,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/shojumaru"
+            android:layout_marginTop="25dp"
             android:padding="20dp"
-            android:text="Minigames"
+            android:text="&#127918; Minigames &#127918;"
             android:layout_gravity="center"
             android:textSize="35sp" />
 
@@ -24,7 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center"
-            android:text="Go Back Home!" />
+            android:text="Go Back Home! &#127968;" />
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@color/cardBG">
+                    android:background="@drawable/bg4">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -66,14 +68,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/coiny"
-                                android:text="Color Not Word"
+                                android:text="Word, not Color"
                                 android:textSize="24dp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"/>
+                                android:text="Follow the text, not the hex!"/>
                         </LinearLayout>
 
                         <RelativeLayout
@@ -83,7 +85,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
-                                android:src="@drawable/colornotwordlogo"/>
+                                android:src="@drawable/wordnotcolorlogo"/>
                         </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -102,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@color/cardBG">
+                    android:background="@drawable/bg5">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -120,13 +122,12 @@
                                 android:textSize="24dp"
                                 android:fontFamily="@font/coiny"
                                 android:text="Reaction Time (GAME MODE 1)"/>
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"
-                                android:textSize="16dp" />
+                                android:text="Time is running, it's green."
+                                android:textSize="16dp"/>
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -136,7 +137,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:src="@drawable/reactiontimelogo"/>
-
                         </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/background5">
+                    android:background="@drawable/bg6">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -172,13 +172,13 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="24dp"
                                 android:fontFamily="@font/coiny"
-                                android:text="Reaction Time (Game Mode 2)"/>
+                                android:text="Reaction Time (GAME MODE 2)"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"
+                                android:text="React quick! The brain is sick!"
                                 android:textSize="16dp" />
                         </LinearLayout>
                         <RelativeLayout
@@ -188,7 +188,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
-                                android:src="@drawable/reactiontimelogo"/>
+                                android:src="@drawable/reactiontime2logo"/>
 
                         </RelativeLayout>
                     </LinearLayout>
@@ -208,7 +208,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/background5">
+                    android:background="@drawable/bg1">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -231,7 +231,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"/>
+                                android:text="Strategy or luck; if not, you suck."/>
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -262,7 +262,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/background5">
+                    android:background="@drawable/bg2">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -285,7 +285,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"/>
+                                android:text="Which is different? Be consistent! "/>
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -298,7 +298,6 @@
 
                         </RelativeLayout>
                     </LinearLayout>
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -316,7 +315,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="@drawable/background5">
+                    android:background="@drawable/bg3">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -339,7 +338,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="16dp"
                                 android:fontFamily="@font/baloo_bhai_2"
-                                android:text="(Description + Category)"/>
+                                android:text="X or O, get three in a row!"/>
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="match_parent"

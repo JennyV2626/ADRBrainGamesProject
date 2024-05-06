@@ -42,6 +42,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Start again" />
+
+        <Button
+            android:id="@+id/backToGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back To Games!" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

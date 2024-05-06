@@ -2,12 +2,15 @@ package com.example.projectbraingames;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,40 +22,75 @@ import java.util.Random;
 
 
 
-public class ColorNotWordGame extends AppCompatActivity {
+public class WordNotColorGame extends AppCompatActivity {
 
-    private static final String RED = "red";
-    private static final String BLUE = "blue";
-    private static final String GREEN = "green";
-    private static final String YELLOW = "yellow";
+    private static final String red = "red";
+    private static final String blue = "blue";
+    private static final String green = "green";
+    private static final String yellow = "yellow";
     private static final String RED_VALUE = "#FF5757";
     private static final String BLUE_VALUE = "#5271FF";
     private static final String GREEN_VALUE = "#7ED957";
     private static final String YELLOW_VALUE = "#FFDE59";
 
     private TextView txtQuestion = null;
-    private Button btnRed, btnBlue, btnGreen, btnYellow = null;
+    private android.widget.ImageButton btnRed, btnBlue, btnGreen, btnYellow = null;
     private ProgressBar progressBar = null;
     private Integer score = 0;
     private final Handler handler = new Handler();
+
+    public String color;
     android.widget.ImageButton backButton;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_color_not_word);
+        setContentView(R.layout.activity_word_not_color);
 
         txtQuestion = findViewById(R.id.txt_question);
 
-        btnRed = findViewById(R.id.btn_red);
-        btnBlue = findViewById(R.id.btn_blue);
-        btnGreen = findViewById(R.id.btn_green);
-        btnYellow = findViewById(R.id.btn_yellow);
+        btnRed = (android.widget.ImageButton)findViewById(R.id.red);
+        btnBlue = (android.widget.ImageButton)findViewById(R.id.blue);
+        btnGreen = (android.widget.ImageButton)findViewById(R.id.green);
+        btnYellow = (android.widget.ImageButton)findViewById(R.id.yellow);
 
         progressBar = findViewById(R.id.progress_bar);
         progressBar.setProgress(0);
 
         setQuestion();
+
+        btnRed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = "red";
+                submitAnswer();
+            }
+        });
+
+        btnBlue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = "blue";
+                submitAnswer();
+            }
+        });
+
+        btnGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = "green";
+                submitAnswer();
+            }
+        });
+
+        btnYellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = "yellow";
+                submitAnswer();
+            }
+        });
 
         backButton = (android.widget.ImageButton) findViewById(R.id.backToGames);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -68,10 +106,10 @@ public class ColorNotWordGame extends AppCompatActivity {
     private void setQuestion() {
         setTimer();
         Map<String, String> colorMap = new HashMap<>();
-        colorMap.put(RED, RED_VALUE);
-        colorMap.put(BLUE, BLUE_VALUE);
-        colorMap.put(GREEN, GREEN_VALUE);
-        colorMap.put(YELLOW, YELLOW_VALUE);
+        colorMap.put(red, RED_VALUE);
+        colorMap.put(blue, BLUE_VALUE);
+        colorMap.put(green, GREEN_VALUE);
+        colorMap.put(yellow, YELLOW_VALUE);
 
         String question = getRandomColor();
         String questionColor = getRandomColor();
@@ -85,7 +123,7 @@ public class ColorNotWordGame extends AppCompatActivity {
     }
 
     private String getRandomColor() {
-        List<String> colors = Arrays.asList(RED, BLUE, GREEN, YELLOW);
+        List<String> colors = Arrays.asList(red, blue, green, yellow);
 
         Random random = new Random();
         int randomIndex = random.nextInt(4);
@@ -93,9 +131,9 @@ public class ColorNotWordGame extends AppCompatActivity {
 
     }
 
-    public void submitAnswer(View view) {
-        Button btn = (Button) view;
-        boolean result = txtQuestion.getText().equals(btn.getText());
+    public void submitAnswer() {
+
+        boolean result = txtQuestion.getText().equals(color);
 
         if(result) {
             // answer is correct

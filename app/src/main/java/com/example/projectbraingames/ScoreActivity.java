@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
 
+    android.widget.Button backButton;
     private TextView txtScore = null;
 
     private Button btnStartAgain = null;
@@ -28,6 +29,14 @@ public class ScoreActivity extends AppCompatActivity {
 
         txtScore.setText(score);
 
+        backButton = (android.widget.Button)findViewById(R.id.backToGames);
+        backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                openGamePage();
+            }
+        });
+
         btnStartAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,5 +45,10 @@ public class ScoreActivity extends AppCompatActivity {
                 view.getContext().startActivity(i);
             }
         });
+    }
+
+    public void openGamePage(){
+        android.content.Intent intent = new android.content.Intent(this, GamePage.class);
+        startActivity(intent);
     }
 }

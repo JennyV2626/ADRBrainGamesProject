@@ -3,6 +3,7 @@ package com.example.projectbraingames;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -36,6 +37,7 @@ public class ReactionTimeGame2 extends AppCompatActivity {
         brainImage = (android.widget.ImageView)findViewById(R.id.brainEmote);
 
         chronometer = (android.widget.Chronometer)findViewById(R.id.chronometer);
+        chronometer.setTextColor(Color.parseColor("#F4D8D8"));
         handler = new Handler();
 
         timer = new Timer();
@@ -57,6 +59,7 @@ public class ReactionTimeGame2 extends AppCompatActivity {
             public void onClick(View view) {
                 tBuff += tMilliSec;
                 handler.removeCallbacks(runnable);
+                chronometer.setTextColor(Color.BLACK);
                 chronometer.stop();
                 }
             }

@@ -20,6 +20,9 @@ public class TicTacToeGame extends AppCompatActivity implements View.OnClickList
     int rounds;
     private int playerOneScoreCount, playerTwoScoreCount;
 
+    android.widget.ImageView player1turn;
+    android.widget.ImageView player2turn;
+
     android.widget.ImageButton backButton;
 
     @SuppressLint("MissingInflatedId")
@@ -27,6 +30,9 @@ public class TicTacToeGame extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe_game);
+
+        player1turn = (android.widget.ImageView)findViewById(R.id.player1Turn);
+        player2turn = (android.widget.ImageView)findViewById(R.id.player2Turn);
 
 
         playerOneScore = findViewById(R.id.score_Player1);
@@ -76,14 +82,19 @@ public class TicTacToeGame extends AppCompatActivity implements View.OnClickList
         if(playerOneActive)
         {
             ((Button)view).setText("X");
-            ((Button)view).setTextColor(Color.parseColor("#0b5394"));
+            ((Button)view).setTextColor(Color.parseColor("#115592"));
             gameState[gameStatePointer] = 0;
+            player2turn.setBackgroundResource(R.drawable.thinkingbrain);
+            player1turn.setBackgroundResource(R.drawable.thinkingbrain2);
+
         }
         else
         {
             ((Button)view).setText("O");
             ((Button)view).setTextColor(Color.parseColor("#990000"));
             gameState[gameStatePointer] = 1;
+            player1turn.setBackgroundResource(R.drawable.thinkingbrain);
+            player2turn.setBackgroundResource(R.drawable.thinkingbrain2);
         }
         rounds++;
         if(checkWinner())
@@ -93,16 +104,21 @@ public class TicTacToeGame extends AppCompatActivity implements View.OnClickList
                 playerOneScoreCount++;
                 updatePlayerScore();
                 playerStatus.setText("TEAM X has won!");
-            }else
-            {
+                player1turn.setBackgroundResource(R.drawable.winnerbrain);
+                player2turn.setBackgroundResource(R.drawable.sadbrain);
+            } else {
                 playerTwoScoreCount++;
                 updatePlayerScore();
                 playerStatus.setText("TEAM O has won!");
+                player2turn.setBackgroundResource(R.drawable.winnerbrain);
+                player1turn.setBackgroundResource(R.drawable.sadbrain);
             }
         }
         else if(rounds==9)
         {
-            playerStatus.setText("DRAW! No Winner");
+            playerStatus.setText("DRAW!");
+            player2turn.setBackgroundResource(R.drawable.waitbrain);
+            player1turn.setBackgroundResource(R.drawable.waitbrain);
         }
         else
         {
@@ -144,6 +160,8 @@ public class TicTacToeGame extends AppCompatActivity implements View.OnClickList
             buttons[i].setText("");
         }
         playerStatus.setText(". . .");
+        player1turn.setBackgroundResource(R.drawable.thinkingbrain);
+        player2turn.setBackgroundResource(R.drawable.thinkingbrain2);
     }
 
     private void updatePlayerScore()

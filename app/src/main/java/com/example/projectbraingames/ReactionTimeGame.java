@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.Random;
 import java.util.Timer;
@@ -23,6 +24,8 @@ public class ReactionTimeGame extends AppCompatActivity {
     public int currentNum;
     public int count;
     public boolean isGreen;
+
+
 
     android.widget.Chronometer chronometer;
     Handler handler;
@@ -64,6 +67,12 @@ public class ReactionTimeGame extends AppCompatActivity {
                     tBuff += tMilliSec;
                     handler.removeCallbacks(runnable);
                     chronometer.setTextColor(Color.BLACK);
+                    chronometer.stop();
+                }
+                if(!isGreen){
+                    tBuff += tMilliSec;
+                    handler.removeCallbacks(runnable);
+                    chronometer.setTextColor(Color.RED);
                     chronometer.stop();
                 }
             }

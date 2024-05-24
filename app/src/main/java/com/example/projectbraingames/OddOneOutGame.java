@@ -3,6 +3,7 @@ package com.example.projectbraingames;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -41,6 +42,7 @@ public class OddOneOutGame extends AppCompatActivity {
         button7 = (android.widget.Button)findViewById(R.id.button7);
         button8 = (android.widget.Button)findViewById(R.id.button8);
         button9 = (android.widget.Button)findViewById(R.id.button9);
+        setRandomColor();
     }
 
     public void openGamePage(){
@@ -48,19 +50,46 @@ public class OddOneOutGame extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setBackgroundColor(){
-        randomNum = RANDOM.nextInt(5) + 1;
-        if(randomNum == 1) {
-            //layout.setBackgroundResource(R.color.pink);
-        } else if(randomNum == 2){
-            //layout.setBackgroundResource(R.color.yellow);
-        } else if(randomNum == 3){
-            //layout.setBackgroundResource(R.color.green);
-        } else if(randomNum == 4){
-            //layout.setBackgroundResource(R.color.blue);
-        } else if(randomNum == 5){
-            //layout.setBackgroundResource(R.color.purple);
+    @SuppressLint("SetTextI18n")
+    public void setRandomColor(){
+        randomNum = RANDOM.nextInt(8) + 1;
+        if(randomNum == 1){
+            button1.setBackgroundColor(Color.RED);
+            button1.setText("&#128542;");
         }
+        if(randomNum == 2){
+            button2.setBackgroundColor(Color.RED);
+            button2.setText("&#128542;");
+        }
+        if(randomNum == 3){
+            button3.setBackgroundColor(Color.RED);
+            button3.setText("&#128542;");
+        }
+        if(randomNum == 4){
+            button4.setBackgroundColor(Color.RED);
+            button4.setText("&#128542;");
+        }
+        if(randomNum == 5){
+            button5.setBackgroundColor(Color.RED);
+            button5.setText("&#128542;");
+        }
+        if(randomNum == 6){
+            button6.setBackgroundColor(Color.RED);
+            button6.setText("&#128542;");
+        }
+        if(randomNum == 7){
+            button7.setBackgroundColor(Color.RED);
+            button7.setText("&#128542;");
+        }
+        if(randomNum == 8){
+            button8.setBackgroundColor(Color.RED);
+            button8.setText("&#128542;");
+        }
+        if(randomNum == 9){
+            button9.setBackgroundColor(Color.RED);
+            button9.setText("&#128542;");
+        }
+
     }
 
 }

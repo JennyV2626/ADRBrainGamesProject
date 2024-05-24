@@ -11,6 +11,7 @@ public class GamePage extends AppCompatActivity {
     android.widget.Button backButton;
 
     CardView colorNotWordCard;
+    CardView brainClickerCard;
     CardView reactionTimeCard;
 
     CardView reactionTime2Card;
@@ -40,6 +41,14 @@ public class GamePage extends AppCompatActivity {
             }
         });
 
+//        brainClickerCard = (CardView) findViewById(R.id.brainClicker);
+//        brainClickerCard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openBrainClickerGame();
+//            }
+//        });
+
         reactionTimeCard = (CardView) findViewById(R.id.reactiontime);
         reactionTimeCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,22 +65,22 @@ public class GamePage extends AppCompatActivity {
             }
         });
 
-        lowHighCard = (CardView) findViewById(R.id.lowhigh);
-        lowHighCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openLowHighGame();
-            }
-        });
+//        lowHighCard = (CardView) findViewById(R.id.lowhigh);
+//        lowHighCard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openLowHighGame();
+//            }
+//        });
 
-
-        oddOneOutCard = (CardView) findViewById(R.id.oddoneout);
-        oddOneOutCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openOddOneOutGame();
-            }
-        });
+//
+//        oddOneOutCard = (CardView) findViewById(R.id.oddoneout);
+//        oddOneOutCard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openOddOneOutGame();
+//            }
+//        });
 
         ticTacToeCard = (CardView) findViewById(R.id.tictactoe);
         ticTacToeCard.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +101,11 @@ public class GamePage extends AppCompatActivity {
         startActivity(intent);
     }
 
+//    public void openBrainClickerGame(){
+//        android.content.Intent intent = new android.content.Intent(this, BrainClickerGame.class);
+//        startActivity(intent);
+//    }
+
     public void openReactionGame(){
         android.content.Intent intent = new android.content.Intent(this, ReactionTimeGame.class);
         startActivity(intent);
@@ -102,15 +116,15 @@ public class GamePage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openLowHighGame(){
-        android.content.Intent intent = new android.content.Intent(this, LowHighGame.class);
-        startActivity(intent);
-    }
-
-    public void openOddOneOutGame(){
-        android.content.Intent intent = new android.content.Intent(this, OddOneOutGame.class);
-        startActivity(intent);
-    }
+//    public void openLowHighGame(){
+//        android.content.Intent intent = new android.content.Intent(this, LowHighGame.class);
+//        startActivity(intent);
+//    }
+//
+//    public void openOddOneOutGame(){
+//        android.content.Intent intent = new android.content.Intent(this, OddOneOutGame.class);
+//        startActivity(intent);
+//    }
 
     public void openTicTacToeGame(){
         android.content.Intent intent = new android.content.Intent(this, TicTacToeGame.class);

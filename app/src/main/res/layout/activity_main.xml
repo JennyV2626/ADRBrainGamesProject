@@ -27,17 +27,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
         android:background="@android:color/transparent"
-        android:layout_margin="50dp"
-        app:srcCompat="@drawable/brainlogo"/>
+        app:srcCompat="@drawable/brainlogo" />
 
     <Button
         android:id="@+id/aboutUsButton"
-        android:layout_width="291dp"
+        android:layout_width="220dp"
         android:layout_height="63dp"
         android:layout_below="@+id/brainLogo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="About Us!"
         android:textSize="25dp" />
 

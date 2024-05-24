@@ -23,7 +23,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/ultra"
         android:text="About Us!"
-        android:textSize="30dp" />
+        android:textSize="35sp" />
 
     <ImageView
         android:id="@+id/ourLogo"
@@ -45,7 +45,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/baloo_bhai_2"
         android:gravity="fill_horizontal"
-        android:text="HEY! We're the MindMasters! :)"
+        android:text="Hey! We're the MindMasters! :)"
         android:textSize="20dp" />
 
 
@@ -98,6 +98,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/list2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloo_bhai_2"
+        android:text="- Reaction time"
+        android:textSize="20dp"
+        android:gravity="fill_horizontal"/>
+
+    <TextView
+        android:id="@+id/list4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="25dp"

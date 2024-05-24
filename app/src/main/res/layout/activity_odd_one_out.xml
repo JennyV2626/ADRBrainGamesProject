@@ -40,24 +40,27 @@
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button2"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button3"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
             android:textSize="60sp"/>
     </LinearLayout>
 
@@ -70,24 +73,27 @@
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button5"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:text="&#128524;"
+            android:layout_weight="1"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button6"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:text="&#128524;"
+            android:layout_weight="1"
             android:textSize="60sp"/>
     </LinearLayout>
 
@@ -100,24 +106,30 @@
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
+            android:textColor="@color/white"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button8"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
+            android:textColor="@color/white"
             android:textSize="60sp"/>
         <Button
             android:id="@+id/button9"
             android:layout_margin="10dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@drawable/rectangle"
+            android:layout_weight="1"
+            android:text="&#128524;"
+            android:textColor="@color/white"
             android:textSize="60sp"/>
     </LinearLayout>
 

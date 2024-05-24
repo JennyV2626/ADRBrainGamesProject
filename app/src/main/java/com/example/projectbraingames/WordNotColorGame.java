@@ -37,6 +37,8 @@ public class WordNotColorGame extends AppCompatActivity {
     private android.widget.ImageButton btnRed, btnBlue, btnGreen, btnYellow = null;
     private ProgressBar progressBar = null;
     private Integer score = 0;
+
+    private int bestScore;
     private final Handler handler = new Handler();
 
     public String color;
@@ -141,6 +143,7 @@ public class WordNotColorGame extends AppCompatActivity {
             setQuestion();
         } else {
             // wrong answer. exit the game
+            if(score > bestScore){}
             exit();
         }
     }

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="@string/score_note"
             android:textAlignment="center"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
@@ -34,18 +34,20 @@
             android:layout_height="wrap_content"
             android:text="50"
             android:textAlignment="center"
-            android:textSize="50sp"
+            android:textSize="40sp"
+            android:layout_marginBottom="30dp"
             android:textStyle="bold" />
+
 
         <Button
             android:id="@+id/btn_start_again"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start again" />
 
         <Button
             android:id="@+id/backToGames"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back To Games!" />
     </LinearLayout>

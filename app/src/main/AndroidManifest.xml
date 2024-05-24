@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ProjectBrainGames"
         tools:targetApi="31">
         <activity
+            android:name=".BrainClickerGame"
+            android:exported="false" />
+        <activity
+            android:name=".LeftRightPage"
+            android:exported="false" />
+        <activity
             android:name=".ReactionTimeGame2"
             android:exported="false" />
         <activity

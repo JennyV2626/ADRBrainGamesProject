@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     android.widget.ImageButton logoButton;
     android.widget.Button aboutUsButton;
-    //public static final Random RANDOM = new Random();
+    android.widget.Button extrasButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        extrasButton = (android.widget.Button)findViewById(R.id.infoButton);
+//        extrasButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openExtrasPage();
+//            }
+//        });
+
 
         aboutUsButton = (android.widget.Button) findViewById(R.id.aboutUsButton);
         aboutUsButton.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openGamePage(){
         android.content.Intent intent = new android.content.Intent(this, GamePage.class);
+        startActivity(intent);
+    }
+
+    public void openExtrasPage(){
+        android.content.Intent intent = new android.content.Intent(this, LeftRightPage.class);
         startActivity(intent);
     }
 
